@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 /**
- * main - entry point
- * Return: Always 1 (success)
+ * main - prints exactly "and that piece of art is useful"
+ * -Dor Korpar, 2015-10-19",is useful"
+ *  followed by a new line, to the standard error
+ *  Return: Always 1 (success)
  */
 int main(void)
 {
-fwrite("and that piece of art is useful\"- Dora Korpar, 2015-10-19\n");
+write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19"\n",59);
 return (1);
 }

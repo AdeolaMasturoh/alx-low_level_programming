@@ -1,5 +1,5 @@
 #include "main.h"
-#include <sttring.h>
+#include <string.h>
 /**
  * _strlen -> function to get the length of a string
  * @s: string pointer topassed to the function

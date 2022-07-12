@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * swap int -> given two integers swap the values they are holiding
+ * swap_int -> given two integers swap the values they are holiding
  * @a: parameter1
  * @b: parameter2
  */

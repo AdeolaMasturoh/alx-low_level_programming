@@ -13,7 +13,7 @@ int main(void)
 		if (ch != 567)
 		{
 			putchar(44);
-			putchat(32);
+			putchar(32);
 		}
 	}
 	putchar(10);

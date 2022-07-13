@@ -5,10 +5,17 @@
  */
 int main(void)
 {
-	char letter;
+	char ch;
 
-	for (letter ='a';letter <= 'z'; letter++)
+	for (ch ='a'; ch <= 'z'; ch++)
 	{
-		putchar(letter);
+		if (ch != 'q' && ch != 'e')
+		{
+			putchar(ch);
+		}
 	}
-	for 
+
+	putchar (10);
+
+	return (0);
+}

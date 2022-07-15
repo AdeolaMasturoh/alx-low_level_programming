@@ -1,40 +1,32 @@
 #include "main.h"
 /**
- * cap_string - capitalize the words of a string
- * @s: string
- * Return: s
+ * cap_string - function to capitalize string
+ * @str: string to capitalise
+ * Return: return capitalized string
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int x, y;
-	int trigger;
-	char nots[] = ",;.!?(){}\nt\" ";
+	int index = 0;
 
-	for (x = 0; trigger = 0; s[x] != '\0'; x++)
+	while (st[++index])
 	{
-		if (s[0] > 96 && s[0] < 123)
-			trigger = 1;
-		for (y = 0; nots[y] != '\n'; y++)
-		{
-			if (nots[y] == s[x])
-				trigger = 1;
-		}
-		if (trigger)
-		{
-			if (s[x] > 96 && s[x] < 123)
-			{
-				s[x] -= 32;
-				trigger = 0;
-			}
-			else if (s[x] > 64 && s[x] < 91)
-			{
-				trigger = 0;
-			}
-			else if (s[x] > 47 && s[x] < 58)
-			{
-			       trigger = 0;
-			}
-		}
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}')
+			str[index] -= 32;
 	}
-return (s);
+	return (str);
 }
